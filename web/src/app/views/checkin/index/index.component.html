@@ -1,0 +1,48 @@
+<mat-card class="p-0">
+  <mat-card-title class="">
+    <div class="card-title-text">Check In Players</div>
+    <mat-divider></mat-divider>
+  </mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <div fxLayout="row wrap">
+        <div fxFlex="100" fxFlex.gt-xs="50" class="pr-1">
+
+          <div class="pb-1">
+            <mat-form-field class="full-width">
+              <mat-label>Contest</mat-label>
+              <mat-select name="contests" formControlName="contests">
+                <mat-option *ngFor="let contest of contests" [value]="contest.id">
+                  <strong>{{contest.amount/100 | currency:'USD'}}</strong> - {{contest.name}} -
+                  {{contest.payout /100 | currency:'USD'}}
+                  {{contest.payoutLabel}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <small *ngIf="form.controls['contests'].hasError('required') && form.controls['contests'].touched"
+              class="form-error-msg">Contest is required </small>
+          </div>
+
+          <div class="pb-1">
+            <mat-form-field class="full-width">
+              <input matInput [textMask]="{mask: phoneMask}" name="phone" formControlName="phone"
+                placeholder="Enter Player Phone Number">
+            </mat-form-field>
+            <small *ngIf="form.controls['phone'].hasError('required') && form.controls['phone'].touched"
+              class="form-error-msg">Phone is required </small>
+            <small *ngIf="form.controls['phone'].hasError('phone') && form.controls['phone'].touched"
+              class="form-error-msg">Must be a United States phone format</small>
+          </div>
+
+        </div>
+
+        <div fxFlex="100" fxFlex.gt-xs="50">
+
+
+        </div>
+      </div>
+      <button mat-raised-button color="primary" [disabled]="form.invalid" (click)="submit()">Check In
+        Player</button>
+    </form>
+  </mat-card-content>
+</mat-card>

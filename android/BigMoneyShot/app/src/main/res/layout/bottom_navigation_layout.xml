@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actTabBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_black_1000"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_8"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/menu_textview_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/FooterItemsStyle"
+        android:drawableTop="@drawable/ic_home_of"
+        android:text="@string/str_home"/>
+
+    <TextView
+        android:id="@+id/menu_textview_location"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/FooterItemsStyle"
+        android:drawableTop="@drawable/ic_location_off"
+        android:text="@string/str_locations"/>
+
+    <TextView
+        android:id="@+id/menu_textview_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        style="@style/FooterItemsStyle"
+        android:drawableTop="@drawable/ic_account_of"
+        android:text="@string/str_account"/>
+
+</LinearLayout>

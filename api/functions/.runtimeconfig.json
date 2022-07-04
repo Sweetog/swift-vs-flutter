@@ -1,0 +1,16 @@
+{
+  "twilio": {
+    "token": "897c041ba6e9e069d46c59ef50714f00",
+    "sid": "ACfb0cb229a1d996a3fad3d4a1895bf1a6"
+  },
+  "mailgun": {
+    "domain": "bigmoneyshot.com",
+    "key": "a5db42149c2f6fb7d0395bd2ae33f171-9ce9335e-7c960d16"
+  },
+  "stripe": {
+    "secretkeytest": "sk_test_Oi0xoLZ2XzLCmlW3aWtzM4oM",
+    "webhookstest": "whsec_T4r883ZD67srQKlLEMMndsuCnlw5G48i",
+    "webhooks": "whsec_qXVyHXoBPG9TUmOCjt0JXuAc6YsCIOBQ",
+    "secretkey": "sk_live_b8X014HwEP8ppklkTlvkOIWe"
+  }
+}

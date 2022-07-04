@@ -1,0 +1,89 @@
+<mat-progress-bar mode="indeterminate" value="100"></mat-progress-bar>
+<h1 matDialogTitle>{{data.isNew ? 'Add New User' : 'Update User'}}</h1>
+<form *ngIf="form" [formGroup]="form" (ngSubmit)="submit()">
+  <input type="hidden" formControlName="uid">
+  <div fxLayout="row wrap" fxLayout.lt-sm="column">
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <input matInput name="name" formControlName="name" placeholder="Name">
+      </mat-form-field>
+      <small *ngIf="form.controls['name'].hasError('required') && form.controls['name'].touched" class="form-error-msg">
+        Name is required </small>
+    </div>
+
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <input matInput type="email" name="email" formControlName="email" placeholder="Email">
+      </mat-form-field>
+      <small *ngIf="form.controls['email'].hasError('required') && form.controls['email'].touched"
+        class="form-error-msg"> Email is required </small>
+
+      <small *ngIf="form.controls['email'].hasError('email') && form.controls['email'].touched" class="form-error-msg">
+        Invaild email address </small>
+    </div>
+
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <input matInput [textMask]="{mask: phoneMask}" name="phone" formControlName="phone" placeholder="Phone Number">
+      </mat-form-field>
+      <small *ngIf="form.controls['phone'].hasError('required') && form.controls['phone'].touched"
+        class="form-error-msg">Phone is required </small>
+      <small *ngIf="form.controls['phone'].hasError('phone') && form.controls['phone'].touched"
+        class="form-error-msg">Must be a United States phone format</small>
+    </div>
+
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <mat-label>Role</mat-label>
+        <mat-select name="role" formControlName="role">
+          <mat-option *ngFor="let role of roles" [value]="role.value">
+            {{role.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <small *ngIf="form.controls['role'].hasError('required') && form.controls['role'].touched"
+        class="form-error-msg">Role is required </small>
+    </div>
+
+
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <mat-label>Home Course</mat-label>
+        <mat-select name="role" formControlName="courseId">
+          <mat-option *ngFor="let course of courses" [value]="course.id">
+            {{course.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <small *ngIf="form.controls['role'].hasError('required') && form.controls['role'].touched"
+        class="form-error-msg">Course is required </small>
+    </div>
+
+    <div fxFlex="50" class="pr-1" *ngIf="data.isNew">
+      <mat-form-field class="full-width">
+        <input type="password" name="password" matInput [formControl]="form.controls['password']" placeholder="Password"
+          value="">
+      </mat-form-field>
+      <small *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched"
+        class="form-error-msg"> Password is required </small>
+    </div>
+
+    <div fxFlex="50" class="pr-1" *ngIf="data.isNew">
+      <mat-form-field class="full-width">
+        <input type="password" name="confirmPassword" matInput [formControl]="form.controls['confirmPassword']"
+          placeholder="Confirm Password" value="">
+      </mat-form-field>
+      <small *ngIf="form.controls['confirmPassword'].hasError('required') && form.controls['confirmPassword'].touched"
+        class="form-error-msg">Confirm password is required.</small>
+      <small *ngIf="form.controls['confirmPassword'].hasError('equalTo')" class="form-error-msg">Passwords
+        do not match.</small>
+    </div>
+
+    <div fxFlex="100" class="mt-1">
+      <button mat-raised-button color="primary" [disabled]="form.invalid">{{data.isNew ? 'Add' : 'Update'}}
+        User</button>
+      <span fxFlex></span>
+      <button mat-button color="warn" type="button" (click)="dialogRef.close(false)">Cancel</button>
+    </div>
+  </div>
+</form>

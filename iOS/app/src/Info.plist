@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>APPLE_MERCHANT_IDENTIFIER</key>
+	<string>$(APPLE_MERCHANT_IDENTIFIER)</string>
+	<key>BIRTHDATE</key>
+	<string>$(BIRTHDATE)</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.13</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.498979789059-9ps8h2i8e875tu9cjttifuq7qbqk6o7l</string>
+				<string>fb545331492606842</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>DISPLAY_NAME</key>
+	<string>$(DISPLAY_NAME)</string>
+	<key>EMAIL</key>
+	<string>$(EMAIL)</string>
+	<key>FACEBOOK_PASSWORD</key>
+	<string>$(FACEBOOK_PASSWORD)</string>
+	<key>FACEBOOK_USER</key>
+	<string>$(FACEBOOK_USER)</string>
+	<key>FIREBASE_FUNCTIONS_BASE_URL</key>
+	<string>$(FIREBASE_FUNCTIONS_BASE_URL)</string>
+	<key>FacebookAppID</key>
+	<string>545331492606842</string>
+	<key>FacebookDisplayName</key>
+	<string>Big Money Shot</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app uses your camera to scan Course QR Code</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) uses location to provide you accurate contests and correct legal terms for your State</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>$(PRODUCT_NAME) uses location to provide you accurate contests and correct legal terms for your State</string>
+	<key>NSLocationUsageDescription</key>
+	<string>$(PRODUCT_NAME) uses your location to provide you accurate contests and correct legal terms for your State</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>$(PRODUCT_NAME) uses location to provide you accurate contests and correct legal terms for your State</string>
+	<key>PASSWORD</key>
+	<string>$(PASSWORD)</string>
+	<key>PHONE</key>
+	<string>$(PHONE)</string>
+	<key>STRIPE_API_VERSION</key>
+	<string>$(STRIPE_API_VERSION)</string>
+	<key>STRIPE_PUBLISHABLE_KEY</key>
+	<string>$(STRIPE_PUBLISHABLE_KEY)</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Aviano-Regular.otf</string>
+		<string>Lalezar-Regular.otf</string>
+		<string>ClanPro-NarrUltra.otf</string>
+		<string>ClanPro-NarrBold.otf</string>
+		<string>ClanPro-NarrNews.otf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+</dict>
+</plist>

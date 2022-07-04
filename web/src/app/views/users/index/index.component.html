@@ -1,0 +1,67 @@
+<div class="m-333">
+  <button mat-raised-button color="primary" (click)="openPopUp({}, true)">Add User</button>
+</div>
+
+<mat-card class="p-0" [@animate]="{value:'*',params:{y:'50px',delay:'300ms'}}">
+  <mat-card-content class="p-0">
+    <ngx-datatable #ngxDatatable class="material ml-0 mr-0" [rows]="rows" [columnMode]="'force'" [headerHeight]="50"
+      [footerHeight]="50" [scrollbarH]="true" [rowHeight]="50" [externalPaging]="false" [count]="page.count"
+      [sortType]="'multi'" [offset]="page.offset" [limit]="page.size" (page)='setPage($event)'>
+      <ngx-datatable-column name="Name" prop="displayName" [flexGrow]="1" [sortable]="true"
+        [comparator]="comparatorText">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.displayName }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Email" prop="email" [flexGrow]="1" [sortable]="false" [comparator]="comparatorText">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.email }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Creation Date" prop="metadata.creationTime" [flexGrow]="1" [sortable]="false"
+        [comparator]="comparatorDate">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.metadata.creationTime | date: 'MM/dd/yyyy hh:mm' }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Last Sign" [flexGrow]="1" [sortable]="false">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ row?.metadata.lastSignInTime | date: 'MM/dd/yyyy hh:mm' }}
+        </ng-template>
+      </ngx-datatable-column>
+      <!-- <ngx-datatable-column name="Status" [flexGrow]="1">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <mat-chip mat-sm-chip [color]="'warn'" [selected]="isRowActive(row)">
+            {{isRowActive(row) ? 'Active' : 'Complete'}}</mat-chip>
+        </ng-template>
+      </ngx-datatable-column> -->
+      <ngx-datatable-column name="Role" prop="customClaims" [flexGrow]="1" [sortable]="false">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          {{ upperCase(row?.customClaims?.role) }}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Actions" [flexGrow]="1" [sortable]="false" *ngIf="isAdmin">
+        <ng-template let-row="row" ngx-datatable-cell-template>
+          <button mat-icon-button mat-sm-button color="primary" class="mr-1" (click)="openPopUp(row, false)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button mat-sm-button color="warn" (click)="deleteItem(row)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-footer>
+        <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize"
+          let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset" let-isVisible="isVisible">
+          <div class="page-count">
+            Total: {{rowCount.toLocaleString()}}
+          </div>
+          <datatable-pager [pagerLeftArrowIcon]="'datatable-icon-left'" [pagerRightArrowIcon]="'datatable-icon-right'"
+            [pagerPreviousIcon]="null" [pagerNextIcon]="null" [page]="curPage" [size]="pageSize" [count]="rowCount"
+            [hidden]="!((rowCount / pageSize) > 1)" (change)='setPage($event)'>
+          </datatable-pager>
+        </ng-template>
+      </ngx-datatable-footer>
+    </ngx-datatable>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,27 @@
+//
+//  Development.xcconfig
+//  BigMoneyShot
+//
+//  Created by Brian Ogden on 1/6/19.
+//  Copyright © 2019 Big Money Shot. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-BigMoneyShot/Pods-BigMoneyShot.development.xcconfig"
+
+FACEBOOK_USER=joe_rselhyn_fab@tfbnw.net
+FACEBOOK_PASSWORD=Fab1234!
+
+DISPLAY_NAME=sweetGold
+EMAIL=test4@test.com
+PASSWORD=Harry123
+
+APP_ICON=AppIcon-Development
+STRIPE_PUBLISHABLE_KEY=pk_test_LE1UOoCjd2gdJxssw9XyGlJx
+STRIPE_API_VERSION=2018-11-08
+APPLE_MERCHANT_IDENTIFIER=merchant.com.bigmoneyshot.app.sandbox
+FIREBASE_FUNCTIONS_BASE_URL=http:/$()/localhost:5000/bigmoneyshot-f4694/us-central1/apptest
+//FIREBASE_FUNCTIONS_BASE_URL=https:/$()/us-central1-bigmoneyshot-f4694.cloudfunctions.net/apptest
+

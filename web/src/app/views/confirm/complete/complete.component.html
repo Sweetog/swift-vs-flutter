@@ -1,0 +1,24 @@
+<div class="page-wrap height-100 black">
+  <div class="session-form-hold">
+    <mat-progress-bar mode="determinate" class="session-progress" value="100"></mat-progress-bar>
+    <mat-card>
+      <mat-card-content>
+        <div class="text-center pt-8 pb-16">
+          <img width="200px" src="assets/images/logo-bms.png" alt="" class="mb-05">
+          <h2>{{displayName}}, You Have Confirmed Your Contest Entry</h2>
+          <p class="text-muted m-0">Today, You Are Eligible to Win</p>
+          <p class="text-muted m-0" *ngIf="contest">Contest: <strong>{{contest.amount/100 | currency:'USD'}}</strong> -
+            {{contest.name}}
+            -
+            {{contest.payout /100 | currency:'USD'}}
+            {{contest.payoutLabel}}</p>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="text-center pt-8 pb-16">
+          <h2>To Claim your Prize</h2>
+          <p class="text-muted m-0">Go to <a href="https:www.bigmoneyshot.com">www.bigmoneyshot.com</a></p>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

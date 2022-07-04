@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#ff000000</color>
+    <color name="primary_dark">#ff000000</color>
+    <color name="primary_light">#D7CCC8</color>
+    <color name="accent">@android:color/darker_gray</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="off_white_color">#F9F9F9</color>
+    <color name="dark_off_white">#f9f1f1</color>
+    <color name="light_background_color">#202125</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="light_gray">#D3D3D3</color>
+    <color name="golden">#e0cc83</color>
+    <color name="button_bg">#1f2124</color>
+    <color name="button_border">#505050</color>
+    <color name="loginsignupbgcolor">#8c8c8c</color>
+    <color name="dark_gray">#505157</color>
+    <color name="underline">#5458DF</color>
+</resources>

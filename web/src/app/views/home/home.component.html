@@ -1,0 +1,65 @@
+<div class="scrollable" [perfectScrollbar]>
+  <section class="home-section section-intro text-center">
+    <div class="container">
+      <img src="assets/images/logo-bms-lg.png" alt="" class="app-logo">
+      <!-- <h1>Play Big WIN BIGGER</h1> -->
+      <!-- <p>Video Verified Contests</p> -->
+      <div style="margin-top:28px"></div>
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center" class="mb-48">
+        <a routerLink="/signup">
+          <button mat-raised-button mat-lg-button color="primary" style="font-weight: bold">
+            <strong>Sign Up With Email</strong>
+          </button>
+        </a>
+        <span fxFlex="8px"></span>
+        <a routerLink="/signin">
+          <button mat-raised-button mat-lg-button>Sign In</button>
+        </a>
+        <!-- <a href="https://themeforest.net/item/egret-angular-4-material-design-admin-template/20161805?ref=mh_rafi" target="_blank">
+            <button mat-raised-button mat-lg-button color="primary">BUY EGRET</button>
+          </a> -->
+      </div>
+      <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center" class="pt-48">
+        <a href="https://www.bigmoneyshot.com/terms" mat-button color="accent" target="_blank">Terms & Conditions</a>
+        <a href="https://www.bigmoneyshot.com/privacy" mat-button color="warn" target="_blank">Privacy Policy</a>
+      </div>
+    </div>
+  </section>
+  <section id="demos" class="home-section section-demos">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="text-20 text-uppercase mt-0 mb-1"><strong>Play Big WIN BIGGER</strong></h2>
+      </div>
+      <div fxLayout="row wrap" fxLayout.lt-sm="column">
+        <div class="demo-box-wrap" fxFlex="33.33">
+          <div class="text-center demo-box" matTooltip="Big Money Shot in Effect" matTooltipPosition="above">
+            <div class="p-0 screenshot">
+              <img src="https://www.bigmoneyshot.com/wp-content/uploads/2019/04/events-4.png">
+            </div>
+          </div>
+        </div>
+        <div class="demo-box-wrap" fxFlex="33.33">
+          <div class="text-center demo-box" matTooltip="Beautiful Golf Couse" matTooltipPosition="above">
+            <div class="p-0 screenshot">
+              <img src="https://www.bigmoneyshot.com/wp-content/uploads/2019/05/image2.jpeg">
+            </div>
+          </div>
+        </div>
+        <div class="demo-box-wrap" fxFlex="33.33">
+          <div class="text-center demo-box" matTooltip="Big Money Shot in Effect" matTooltipPosition="above">
+            <div class="p-0 screenshot">
+              <img src="https://www.bigmoneyshot.com/wp-content/uploads/2019/04/bms-event-3.png">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="text-center">
+        <p>Configure your own layout using customizer.</p>
+        <button mat-fab color="primary" (click)="goToMainDash()">
+          <mat-icon>settings</mat-icon>
+        </button>
+      </div> -->
+    </div>
+  </section>
+</div>

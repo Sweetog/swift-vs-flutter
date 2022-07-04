@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextInputLayoutAppearance" parent="Base.Widget.MaterialComponents.TextInputLayout">
+        <!-- reference our hint & error styles -->
+        <item name="android:colorAccent">@android:color/holo_purple</item>
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="colorControlActivated">@android:color/darker_gray</item>
+        <item name="colorControlNormal">@color/primary_text</item>
+        <item name="colorControlHighlight">@android:color/holo_purple</item>
+    </style>
+</resources>

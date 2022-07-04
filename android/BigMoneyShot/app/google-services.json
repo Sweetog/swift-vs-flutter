@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "498979789059",
+    "firebase_url": "https://bigmoneyshot-f4694.firebaseio.com",
+    "project_id": "bigmoneyshot-f4694",
+    "storage_bucket": "bigmoneyshot-f4694.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498979789059:android:422b7613218b8a33",
+        "android_client_info": {
+          "package_name": "com.bigmoneyshot.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498979789059-tk081avjcuefqt9bmqgo2srhcbk6k8at.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bigmoneyshot.android",
+            "certificate_hash": "8d9e51cce90865b1fab6a165005e3a135b06b6e1"
+          }
+        },
+        {
+          "client_id": "498979789059-8c4sp52nrsb7nhfsp1gq77r8q0qnhkud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzskxpzkVOruJcxDGhDywmlMj_3sCj5mU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498979789059-8c4sp52nrsb7nhfsp1gq77r8q0qnhkud.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "498979789059-9ps8h2i8e875tu9cjttifuq7qbqk6o7l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bigmoneyshot.app"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

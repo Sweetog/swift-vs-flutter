@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_background"
+    tools:context=".ui.SetupActivity">
+
+    <TextView
+        android:id="@+id/text_view_setup_payment"
+        android:layout_width="0dp"
+        android:textSize="@dimen/margin_24"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_40"
+        android:layout_marginStart="@dimen/margin_40"
+        android:gravity="center_horizontal"
+        android:text="@string/setup_payment"
+        android:textColor="@color/off_white_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_add_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_50"
+        android:layout_marginTop="@dimen/margin_16"
+        android:layout_marginEnd="@dimen/margin_50"
+        android:textColor="@color/golden"
+        android:textAllCaps="false"
+        android:background="@drawable/button"
+        android:text="Add Payment"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_setup_payment"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_setup_payment" />
+
+    <TextView
+        android:id="@+id/text_view_setup_later"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginEnd="@dimen/margin_40"
+        android:text="Setup Payment Later"
+        android:textColor="@color/off_white_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_add_payment" />
+</androidx.constraintlayout.widget.ConstraintLayout>

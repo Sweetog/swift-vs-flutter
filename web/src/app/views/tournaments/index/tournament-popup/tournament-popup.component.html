@@ -1,0 +1,99 @@
+<h1 matDialogTitle>{{data.isNew ? 'Add New Tournament' : 'Update Tournament'}} </h1>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <input type="hidden" formControlName="id">
+  <div fxLayout="row wrap" fxLayout.lt-sm="column">
+
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <mat-label>Contest</mat-label>
+        <mat-select name="contest" formControlName="contest">
+          <mat-option *ngFor="let h of data.payload.course.tournaments.hio"
+            [value]="{payout: h.payout, price: h.price}">
+            <strong>{{h.price/100 | currency:'USD'}}</strong> - Hole In One -
+            {{h.payout /100 | currency:'USD'}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-error *ngIf="form.controls['contest'].hasError('required') && form.controls['contest'].touched"
+        class="form-error-msg">Contest is required </mat-error>
+    </div>
+
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <input matInput name="name" formControlName="name" placeholder="Tournament Host">
+      </mat-form-field>
+      <mat-error *ngIf="form.controls['name'].hasError('required') && form.controls['name'].touched"
+        class="form-error-msg">
+        Tournament host is required </mat-error>
+    </div>
+
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <input matInput name="participants" formControlName="participants" placeholder="Number of Participants">
+      </mat-form-field>
+      <mat-error *ngIf="form.controls['participants'].hasError('required') && form.controls['participants'].touched"
+        class="form-error-msg"> Number of Participants is required, must be a number between 25 and 350 </mat-error>
+      <mat-error *ngIf="form.controls['participants'].hasError('range') && form.controls['participants'].touched"
+        class="form-error-msg"> Number of Participants must be a number between 25 and 350 </mat-error>
+    </div>
+
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <input matInput name="date" formControlName="date" placeholder="Date" [matDatepicker]="appDatepicker"
+          [min]="minDate" [max]="maxDate">
+
+        <mat-datepicker-toggle matSuffix [for]="appDatepicker"></mat-datepicker-toggle>
+      </mat-form-field>
+      <mat-datepicker #appDatepicker></mat-datepicker>
+      <mat-error *ngIf="form.controls['date'].hasError('required') && form.controls['date'].touched"
+        class="form-error-msg">
+        Date is required </mat-error>
+      <mat-error *ngIf="form.controls['date'].hasError('minDate') && form.controls['date'].touched"
+        class="form-error-msg">
+        Minimum Date is {{minDate | date:'MM-dd-yyyy'}} </mat-error>
+      <mat-error *ngIf="form.controls['date'].hasError('maxDate') && form.controls['date'].touched"
+        class="form-error-msg">
+        Max Date is {{maxDate | date:'MM-dd-yyyy'}} </mat-error>
+    </div>
+
+    <div fxFlex="50" class="pr-1">
+      <mat-form-field class="full-width">
+        <div style="display: flex">
+          <input matInput name="time" formControlName="time" [ngxTimepicker]="toggleTimepicker" placeholder="Time">
+          <ngx-material-timepicker-toggle [for]="toggleTimepicker">
+            <svg style="fill:#fff;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="15px" height="15px"
+              ngxMaterialTimepickerToggleIcon>
+              <path
+                d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M16,16H7.995 C7.445,16,7,15.555,7,15.005v-0.011C7,14.445,7.445,14,7.995,14H14V5.995C14,5.445,14.445,5,14.995,5h0.011 C15.555,5,16,5.445,16,5.995V16z" />
+            </svg>
+          </ngx-material-timepicker-toggle>
+        </div>
+      </mat-form-field>
+      <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>
+      <mat-error *ngIf="form.controls['time'].hasError('required') && form.controls['time'].touched"
+        class="form-error-msg">
+        Time is required </mat-error>
+    </div>
+
+
+    <div fxFlex="100" class="mt-1">
+      <span>
+        {{(totalCost) ? 'Total Tournament Cost: ' : ''}}
+        {{totalCost | currency:'USD'}} </span>
+      &nbsp; &nbsp; &nbsp;
+      <span>
+        {{(costPerPlayer) ? 'Cost Per Player: ' : ''}}
+        {{costPerPlayer | currency:'USD'}} </span>
+      <mat-error *ngIf="form.errors && form.errors['invalidParticipants']"> Contests greater than $10,000 must have at
+        least 50 participants
+      </mat-error>
+    </div>
+
+    <div fxFlex="100" class="mt-1">
+      <button mat-raised-button color="primary" [disabled]="form.invalid">{{data.isNew ? 'Add' : 'Update'}}
+        Tournament</button>
+      <span fxFlex></span>
+      <button mat-button color="warn" type="button" (click)="dialogRef.close(false)">Cancel</button>
+    </div>
+  </div>
+</form>

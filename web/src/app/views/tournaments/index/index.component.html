@@ -1,0 +1,57 @@
+<div class="m-333">
+    <button mat-raised-button color="primary" (click)="openPopUp({}, true)">Add Tournament</button>
+</div>
+
+<mat-card class="p-0" [@animate]="{value:'*',params:{y:'50px',delay:'300ms'}}">
+    <mat-card-content class="p-0">
+        <ngx-datatable class="material ml-0 mr-0" [rows]="items" [columnMode]="'force'" [headerHeight]="50"
+            [footerHeight]="50" [scrollbarH]="true" [limit]="10" [rowHeight]="50">
+            <ngx-datatable-column name="Host" [flexGrow]="1">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ row?.name }}
+                </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Participants" [flexGrow]="1">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ row?.participants }}
+                </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Date" [flexGrow]="1">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ row?.date | date: 'MM/dd/yyyy' }}
+                </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Time" [flexGrow]="1">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ row?.time }}
+                </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Payout" [flexGrow]="1">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ row?.contest.payout / 100 | currency:'USD' }}
+                </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Total Cost" [flexGrow]="1">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    {{ row.participants * row?.contest.price / 100 | currency:'USD' }}
+                </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Status" [flexGrow]="1">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    <mat-chip mat-sm-chip [color]="'warn'" [selected]="isRowActive(row)">
+                        {{isRowActive(row) ? 'Active' : 'Complete'}}</mat-chip>
+                </ng-template>
+            </ngx-datatable-column>
+            <ngx-datatable-column name="Actions" [flexGrow]="1">
+                <ng-template let-row="row" ngx-datatable-cell-template>
+                    <button mat-icon-button mat-sm-button color="primary" class="mr-1" (click)="openPopUp(row, false)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button mat-sm-button color="warn" (click)="deleteItem(row)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </ng-template>
+            </ngx-datatable-column>
+        </ngx-datatable>
+    </mat-card-content>
+</mat-card>

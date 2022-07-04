@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@drawable/default_background"
+        android:layout_height="match_parent">
+    <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:id="@+id/logo"
+                android:layout_marginLeft="@dimen/margin_40"
+                android:layout_marginRight="@dimen/margin_40"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/big_money_logo"
+                android:layout_marginBottom="@dimen/margin_60"/>
+        <Button
+                android:id="@+id/button_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_60"
+                android:layout_marginTop="@dimen/margin_24"
+                android:layout_marginEnd="@dimen/margin_60"
+                android:text="@string/member"
+                android:textColor="@color/golden"
+                android:textAllCaps="false"
+                android:background="@drawable/button"
+        />
+        <Button
+                android:id="@+id/button_non_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_60"
+                android:layout_marginTop="@dimen/margin_32"
+                android:layout_marginEnd="@dimen/margin_60"
+                android:textAllCaps="false"
+                android:text="@string/notmember"
+                android:textColor="@color/golden"
+                android:background="@drawable/button"/>
+    </LinearLayout>
+
+</RelativeLayout>

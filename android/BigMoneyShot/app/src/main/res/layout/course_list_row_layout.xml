@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/default_background"
+    android:orientation="horizontal"
+    android:layout_marginTop="@dimen/margin_4"
+    android:layout_marginBottom="@dimen/margin_4">
+
+    <ImageView
+        android:id="@+id/image_view_golf_course"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/golf_course_sample"/>
+
+    <LinearLayout
+        android:id="@+id/left_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_view_golf_course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/golden"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/latobold"
+            android:text="La Jolla Country Club"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_8">
+            <TextView
+                android:id="@+id/text_view_hole"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/golden"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold"
+                android:text="7th Hole"/>
+
+            <TextView
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/golden"
+                android:gravity="center_vertical"
+                android:text="-"
+                android:textStyle="bold"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                />
+
+            <TextView
+                android:id="@+id/text_view_par"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Par 3"
+                android:textStyle="bold"
+                android:textColor="@color/golden"
+                />
+
+            <TextView
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:textColor="@color/golden"
+                android:gravity="center_vertical"
+                android:text="-"
+                android:textStyle="bold"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                />
+
+            <TextView
+                android:id="@+id/text_view_yards"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="148 yards"
+                android:textStyle="bold"
+                android:textColor="@color/golden"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

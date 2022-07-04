@@ -1,0 +1,48 @@
+::ng-deep .timepicker {
+
+    .timepicker__header {
+        background-color: #1E2128 !important;
+    }
+
+    .timepicker__body {
+        background-color: #303030 !important;
+    }
+
+    .timepicker__actions {
+        background-color: #1E2128 !important;
+    }
+
+    .timepicker-dial__time {
+        color: #fcbf4f !important;
+    }
+
+    .timepicker-dial__period {
+        color: #fcbf4f !important;
+    }
+
+    .clock-face {
+        background-color: #424242 !important;
+    }
+
+    .clock-face__clock-hand {
+        background-color: #fcbf4f !important;
+
+        &::after {
+            background-color: #fcbf4f !important;
+        }
+
+        &::before {
+            border-color: #fcbf4f !important;
+        }
+    }
+
+    .clock-face__number {
+        >span.active {
+            background-color: #fcbf4f !important;
+        }
+    }
+
+    button:not(.timepicker-dial__item) {
+        color: #fcbf4f !important;
+    }
+}

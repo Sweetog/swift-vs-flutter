@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">BigMoneyShot</string>
+    <string name="title_activity_auth_ui">AuthUiActivity</string>
+    <string name="facebook_application_id" translatable="false">545331492606842</string>
+    <!-- Facebook Application ID, prefixed by 'fb'. Enables Chrome Custom tabs. -->
+    <string name="facebook_login_protocol_scheme" translatable="false">fb545331492606842</string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_bottom_nav">BottomNavActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_play">Play</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="attempts_label">Attempts</string>
+    <string name="handicap_label">Handicap</string>
+    <string name="sample_user_name">Lawrence Chapman</string>
+    <string name="yards_attempted_label">Yards Attempted</string>
+    <string name="average_yards_label">Average Yards</string>
+    <string name="average_dist_pin_label">Average Dist. Pin</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_golf">GolfActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="sign_out">Sign out</string>
+    <string name="title_activity_email_password">Email Registration</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="sign_up_with_facebook">Sign up with Facebook</string>
+    <string name="sign_in_with_email">Sign in with Email</string>
+    <string name="sign_up_with_email">Sign up with Email</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="member">I\'m a Member</string>
+    <string name="notmember">Become a Member</string>
+    <string name="strfirstname">First Name</string>
+    <string name="strlastName">Last Name</string>
+    <string name="strbirthday">Birthday</string>
+    <string name="stremail">Email</string>
+    <string name="strpassword">Password</string>
+    <string name="strconfirmpassword">Confirm Password</string>
+    <string name="strcontinue">Continue</string>
+    <string name="strsignin">Sign In</string>
+    <string name="str_home">Home</string>
+    <string name="str_locations">Locations</string>
+    <string name="str_account">Account</string>
+    <string name="text_charles">CharlesTest SmithTest</string>
+    <string name="text_welcome">Welcome to Big Money Shot!</string>
+    <string name="touch_location">Touch the Location Menu below \n\tto Enter Daily Golf Contests!</string>
+    <string name="text_btn_payment_methods">Payment Methods</string>
+    <string name="text_btn_claim_prize">Claim Prize</string>
+    <string name="text_btn_logout">Logout</string>
+
+    <!--Stripe related-->
+    <string name="save">Save</string>
+    <string name="saverx">Save Rx</string>
+    <string name="saveService">Save with Service</string>
+    <string name="select_add_card">Select or add card</string>
+    <string name="selected_card">Selected card:</string>
+    <string name="addPayment">Add Payment Method</string>
+    <string name="paymentMethods">Payment Methods</string>
+    <string name="progressMessage">Creating Token&#8230;</string>
+    <string name="endingIn">Card ending in </string>
+    <string name="validationErrors">Validation Errors</string>
+    <string name="verify">Verify</string>
+    <string name="text_confirm">Confirm</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="disclaimer_confirm">By clicking "Confirm", you are indicating\nthat you have read and agree to the <font color="#e0cc83">Big\nMoney Shot Privacy Policy</font> and <font color="#e0cc83">Terms Of\nUse</font></string>
+    <string name="text_back_to_location">Back to Location</string>
+    <string name="text_payment_confirmed">Payment Confirmed</string>
+    <string name="text_claim">To Claim a prize go to your Account</string>
+    <string name="text_btn_contest_details">Contest Details</string>
+    <string name="text_locationdetail">Fairmount Grand Del Mar \n17th Hole - Par 3 - 178 yards</string>
+    <string name="contest_details_label1">Fairmount Grand Del Mar</string>
+    <string name="contest_details_label2">Today\'s Contest</string>
+    <string name="contest_details_label3">Birdie - $100.00 Prize</string>
+    <string name="contest_details_label4">Sandy Par - $100.00 Prize</string>
+    <string name="contest_details_label5">Hole In One - $10,000.00 Prize</string>
+    <string name="text_btn_contest_full_details">Enter Contest - $10.00</string>
+    <string name="text_important_notice">Important Notice!</string>
+    <string name="text_you_must_participate">You must participate in \n the contest TODAY</string>
+    <string name="text_confirm_payment">Confirm payment of $10.00</string>
+    <string name="text_goodluck">Good Luck!</string>
+
+
+    <!-- Database Variables-->
+    <string name="db_name_users">users</string>
+    <string name="already_registered">Already Registered?</string>
+    <string name="required_field">This field is required</string>
+    <string name="error_invalid_email_address">Must be a valid email address</string>
+    <string name="setup_payment">Setup Payment</string>
+    <string name="ok">Ok</string>
+
+</resources>

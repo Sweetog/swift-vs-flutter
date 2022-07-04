@@ -1,0 +1,99 @@
+<!-- First row -->
+<mat-card class="p-0" [@animate]="{ value: '*', params: { y: '50px', delay: '300ms' } }">
+  <div fxLayout="row wrap">
+    <div fxFlex="50" fxFlex.gt-sm="20" fxFlex.sm="50">
+      <div class="text-center pt-1 pb-1 border-right-light">
+        <mat-icon class="text-green">show_chart</mat-icon>
+        <h4 class="m-0 " *ngIf="course">{{course.purchaseCount}}</h4>
+        <small class="m-0 ">Contest Entries</small>
+      </div>
+    </div>
+    <div fxFlex="50" fxFlex.gt-sm="20" fxFlex.sm="50">
+      <div class="text-center pt-1 pb-1 border-right-light">
+        <mat-icon class="text-blue">person</mat-icon>
+        <h4 class="m-0 " *ngIf="course">{{course.userCount}}</h4>
+        <small class="m-0 ">Players</small>
+      </div>
+    </div>
+    <!-- <div fxFlex="50" fxFlex.gt-sm="20" fxFlex.sm="50">
+      <div class="text-center pt-1 pb-1 border-right-light">
+        <mat-icon class="text-blue">cloud_download</mat-icon>
+        <h4 class="m-0 ">1200</h4>
+        <small class="m-0 ">Downloads</small>
+      </div>
+    </div>
+    <div fxFlex="50" fxFlex.gt-sm="20" fxFlex.sm="50">
+      <div class="text-center pt-1 pb-1 border-right-light">
+        <mat-icon class="text-green">comment</mat-icon>
+        <h4 class="m-0 ">16420</h4>
+        <small class="m-0 ">Comments</small>
+      </div>
+    </div>
+    <div fxFlex="50" fxFlex.gt-sm="20" fxFlex.sm="50">
+      <div class="text-center pt-1 pb-1">
+        <mat-icon class="text-red">favorite</mat-icon>
+        <h4 class="m-0 ">4070</h4>
+        <small class="m-0 ">Likes</small>
+      </div>
+    </div> -->
+  </div>
+</mat-card>
+<!--/ End first row -->
+
+<!-- 2nd row -->
+<div fxLayout="row wrap">
+  <div fxFlex="100" fxFlex.gt-sm="33.33" fxFlex.sm="50"
+    [@animate]="{ value: '*', params: { y: '50px', delay: '600ms' } }">
+    <mat-card class="p-0" style="cursor: pointer" (click)="goToCheckin()">
+      <div style="margin: 10px;">
+        <button mat-fab color="primary">
+          <mat-icon>flag</mat-icon>
+        </button>
+        <span class="ml-1 mt-1">
+          Check In Player
+        </span>
+      </div>
+    </mat-card>
+  </div>
+
+  <div fxFlex="100" fxFlex.gt-sm="33.33" fxFlex.sm="50"
+    [@animate]="{ value: '*', params: { y: '50px', delay: '400ms' } }">
+    <mat-card class="p-0 " style="cursor: pointer" (click)="goToTournaments()">
+      <div style="margin: 10px;">
+        <button mat-fab color="primary">
+          <mat-icon>local_play</mat-icon>
+        </button>
+        <span class="ml-1 mt-1">
+          Book A Tournament
+        </span>
+      </div>
+    </mat-card>
+  </div>
+
+</div>
+<!--/ End 2nd row -->
+
+<!-- 3rd row -->
+<div fxLayout="row wrap">
+  <div fxFlex="100" fxFlex.gt-sm="66.67" fxFlex.sm="50" [@animate]="{value:'*',params:{delay:'400ms',scale:'.9'}}">
+    <mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="start center">
+        <h6 class="m-0">Sales Last {{salesChartDays}} Days </h6>
+        <span fxFlex></span>
+        <!-- <button mat-icon-button [matMenuTriggerFor]="chartMenu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #chartMenu="matMenu">
+          <button mat-menu-item>
+            <span>Last 7 days</span>
+          </button>
+          <button mat-menu-item>
+            <span>Last 30 days</span>
+          </button>
+        </mat-menu> -->
+      </div>
+
+      <div echarts [options]="salesChart" [autoResize]="true" style="height: 340px;"></div>
+    </mat-card>
+  </div>
+</div>
